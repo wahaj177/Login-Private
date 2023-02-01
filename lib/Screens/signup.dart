@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class login extends StatelessWidget {
-  const login({super.key});
+class sign_up extends StatelessWidget {
+  const sign_up({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,13 @@ class login extends StatelessWidget {
         children: [
           Container(
             height: 33,
-            width: 74,
+            width: 105,
             // color: Colors.blue,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Login", style: TextStyle(fontSize: 28)),
+                Text("Sign Up", style: TextStyle(fontSize: 28)),
               ],
             ),
           ),
@@ -51,18 +51,15 @@ class login extends StatelessWidget {
                       onPressed: () {}, icon: Icon(Icons.remove_red_eye))),
             ),
           ),
-          InkWell(
-            child: Container(
-              height: 22,
-              width: 326,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    "Forget Password?",
-                    style: TextStyle(fontSize: 17),
-                  ),
-                ],
+          Container(
+            height: 70,
+            width: 350,
+            child: TextFormField(
+              decoration: InputDecoration(
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(40)),
+                labelText: ("Phone Number"),
+                hintText: ("12345678"),
               ),
             ),
           ),
@@ -88,8 +85,8 @@ class login extends StatelessWidget {
                   width: 326,
                   child: Center(
                     child: Text(
-                      "Login with social",
-                      style: TextStyle(fontSize: 20),
+                      "Already have aan account? Sign In",
+                      style: TextStyle(fontSize: 17),
                     ),
                   ),
                 ),
